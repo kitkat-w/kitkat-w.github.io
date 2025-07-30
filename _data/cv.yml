@@ -47,7 +47,7 @@
         - Designed StageAR: a real-time localization system using LiDAR and cameras.
         - Developed mesh streaming pipeline with neural rendering and canonical model updating.
     - title: Head Teaching Assistant
-      institution: 15-473/673: Visual Computing Systems, CMU
+      institution: "15-473/673: Visual Computing Systems, CMU"
       year: Fall 2024
       description:
         - Delivered lectures and maintained course materials.
