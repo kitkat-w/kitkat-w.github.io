@@ -4,7 +4,7 @@
     - name: Full Name
       value: Shengxi Wu
     - name: Date of Birth
-      value: [REDACTED or TBD]  # (You can provide this if you'd like it listed)
+      value: [REDACTED or TBD] # (You can provide this if you'd like it listed)
     - name: Languages
       value: English, Mandarin Chinese
 

@@ -101,9 +101,7 @@
       "name": "Programming & Tools",
       "level": "",
       "icon": "",
-      "keywords": [
-        "C++", "Python (PyTorch)", "C", "System Verilog", "Go", "MATLAB", "OpenCV", "Open3D", "Vulkan", "Unity", "Blender", "Arduino"
-      ]
+      "keywords": ["C++", "Python (PyTorch)", "C", "System Verilog", "Go", "MATLAB", "OpenCV", "Open3D", "Vulkan", "Unity", "Blender", "Arduino"]
     }
   ],
   "languages": [],
