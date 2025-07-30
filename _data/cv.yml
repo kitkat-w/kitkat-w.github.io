@@ -2,96 +2,89 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Shengxi Wu
     - name: Date of Birth
-      value: 14th March 1879
+      value: [REDACTED or TBD]  # (You can provide this if you'd like it listed)
     - name: Languages
-      value: English, German
+      value: English, Mandarin Chinese
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master of Science in Robotics
+      institution: Carnegie Mellon University, Pittsburgh, PA, USA
+      year: 2025 - 2027
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Focused on computational imaging, computer vision, and physics-based rendering.
+        - Relevant courses: Computational Photography, Visual Computing Systems, Physics-based Methods in Vision
+    - title: Bachelor of Science in ECE and CS
+      institution: Carnegie Mellon University, Pittsburgh, PA, USA
+      year: 2021 - 2025
       description:
-        - Description 1.
-        - Description 2.
+        - GPA: 3.89/4.0
+        - Dean’s List (all semesters)
+        - College Research Honour
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Research Intern
+      institution: Adobe Research, San Jose, CA
+      year: May – Aug 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Designed algorithms for real-time video editing tasks in Adobe Premiere Pro.
+        - Collaborated across teams to transfer object tracking research into product features.
+    - title: Research Assistant
+      institution: Light Transport Lab, Carnegie Mellon University
+      year: May 2024 – Present
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Conducted research in visual vibrometry using ESPI.
+        - Developed robust phase unwrapping algorithms under noise.
+    - title: Research Assistant
+      institution: Wiselab, Carnegie Mellon University
+      year: May 2022 – Dec 2024
       description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        - Designed StageAR: a real-time localization system using LiDAR and cameras.
+        - Developed mesh streaming pipeline with neural rendering and canonical model updating.
+    - title: Head Teaching Assistant
+      institution: 15-473/673: Visual Computing Systems, CMU
+      year: Fall 2024
+      description:
+        - Delivered lectures and maintained course materials.
+        - Advised undergraduate and graduate students on visual computing projects.
+    - title: Teaching Assistant
+      institution: 21-259: Calculus in Three Dimensions, CMU
+      year: Fall 2022
+      description:
+        - Held weekly recitations and office hours.
+        - Reviewed and graded student assignments.
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Hybrid Transient Imaging Simulation
+      year: 2024
+      description: Simulated structured light and CW-ToF fusion in Mitsuba 3 for transient light separation.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2025
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+        - Dean’s List (all semesters)
+        - College Research Honour
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Computational Imaging
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Transient imaging, speckle interferometry, ToF-light fusion
+    - title: Visual Computing Systems
       items:
-        - Description 1.
-        - Description 2.
+        - Real-time graphics, AR/VR pipelines, neural rendering
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Photography
