@@ -13,7 +13,7 @@ profile:
 
 ### 🧠 About Me
 
-I'm a Master's student in Robotics at Carnegie Mellon University. My research focuses on computational imaging, transient light transport, and visual computing systems. I have experience in real-time AR localization, neural rendering, and speckle interferometry.
+I'm a Master's student in Robotics at Carnegie Mellon University. My research focuses on computational imaging. I have experience in real-time AR localization and speckle interferometry.
 
 ---
 
