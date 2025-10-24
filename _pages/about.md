@@ -11,17 +11,21 @@ profile:
   image_circular: true
 ---
 
-### 🧠 About Me
+### About Me
 
-I'm a Master's student in Robotics at Carnegie Mellon University. My research focuses on computational imaging. I have experience in real-time AR localization and speckle interferometry.
+I'm a Master's student in Robotics at Carnegie Mellon University. I am fortunate to be advised by [Prof. Matthew O'Toole](https://www.cs.cmu.edu/~motoole2/).  
+During my undergraduate studies at Carnegie Mellon University, I had the honour to work with [Prof. Anthony Rowe](https://users.ece.cmu.edu/~agr/) before joining my current lab.
+
+My research interest lies in computational photography, with experiences in real-time AR/ VR systems.
 
 ---
 
-### 📄 Publications
+### Publications
 
 - **StageAR: Markerless Mobile Phone Localization for AR in Live Events**  
-  _Tao Jin, Shengxi Wu, Mallesham Dasari, Kittipat Apicharttrisorn, Anthony Rowe_  
-  _IEEE Conference on Virtual Reality and 3D User Interfaces (VR), 2024_
+  <img src="assets/img/stagear.png" alt="stagear" width="14"/>
+  _Tao Jin, **Shengxi Wu**, Mallesham Dasari, Kittipat Apicharttrisorn, Anthony Rowe_  
+   _IEEE Conference on Virtual Reality and 3D User Interfaces (VR), 2024_
 
   <a href="/assets/papers/IEEE_VR_24_StageAR.pdf">[PDF]</a>
 
