@@ -41,3 +41,11 @@ I'm a Master's student in Robotics at Carnegie Mellon University. My research fo
 --- -->
 
 ### Academic services
+
+Teaching Assistant, 18-453/653: Intro to XR Systems, Carnegie Mellon University (Fall 2025)
+
+Teaching Assistant, 15-414: Bug Catching: Automated Program Verification and Testing, Carnegie Mellon University (Spring 2025)
+
+Head Teaching Assistant, 15-473/673: Visual Computing Systems, Carnegie Mellon University (Fall 2024)
+
+Teaching Assistant, 21-259: Calculus in Three Dimensions (Fall 2022)
