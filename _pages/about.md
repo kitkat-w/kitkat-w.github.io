@@ -23,11 +23,11 @@ I'm a Master's student in Robotics at Carnegie Mellon University. My research fo
   _Tao Jin, Shengxi Wu, Mallesham Dasari, Kittipat Apicharttrisorn, Anthony Rowe_  
   _IEEE Conference on Virtual Reality and 3D User Interfaces (VR), 2024_
 
-  <a href="/assets/papers/stagear.pdf">[PDF]</a>
+  <a href="/assets/papers/IEEE_VR_24_StageAR.pdf">[PDF]</a>
 
 ---
 
-### 🛠 Projects
+<!-- ### 🛠 Projects
 
 - **Hybrid Transient Imaging Simulation**  
   Simulated structured light and continuous-wave ToF fusion in Mitsuba 3 with modeled PMD sensors.
@@ -38,7 +38,7 @@ I'm a Master's student in Robotics at Carnegie Mellon University. My research fo
 - **Visual Vibrometry**  
   Developed ESPI-based phase unwrapping algorithms to extract surface vibration patterns.
 
----
+--- -->
 
 ### 📚 Education
 
