@@ -2,14 +2,14 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
+title: "Shengxi Wu" # the website title (if blank, full name will be used instead)
 first_name: Shengxi
 middle_name:
 last_name: Wu
 contact_note: >
   shengxiw at andrew dot cmu dot edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Master's student in Robotics at Carnegie Mellon University. My research focuses on computational imaging, computer vision, and visual computing systems.
+  Master's student in Robotics at Carnegie Mellon University. Research in computational imaging, time-of-flight, and real-time AR/VR systems.
 footer_text: >
 keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -21,6 +21,10 @@ last_updated: false # set to true if you want to display last updated in the foo
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
+author:
+  name: "Shengxi Wu"
+  email: "shengxiw@andrew.cmu.edu"
+  github_username: kitkat-w
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
@@ -211,6 +215,7 @@ plugins:
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll-seo-tag
 
 # Sitemap settings
 defaults:

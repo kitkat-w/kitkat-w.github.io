@@ -9,6 +9,7 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: true
+  image_size: 120px
 ---
 
 ### About Me
@@ -22,14 +23,14 @@ My research interest lies in computational photography, with experiences in real
 
 ### Publications
 
-- **StageAR: Markerless Mobile Phone Localization for AR in Live Events**  
-  <img src="assets/img/stagear.png" alt="stagear" width="14"/>
-  _Tao Jin, **Shengxi Wu**, Mallesham Dasari, Kittipat Apicharttrisorn, Anthony Rowe_  
-   _IEEE Conference on Virtual Reality and 3D User Interfaces (VR), 2024_
+<img src="assets/img/stagear.png" alt="StageAR" width="150" align="left" style="margin-right:15px; border-radius:6px;">
 
-  <a href="/assets/papers/IEEE_VR_24_StageAR.pdf">[PDF]</a>
+**StageAR: Markerless Mobile Phone Localization for AR in Live Events**  
+_Tao Jin, **Shengxi Wu**, Mallesham Dasari, Kittipat Apicharttrisorn, Anthony Rowe_  
+_IEEE Conference on Virtual Reality and 3D User Interfaces (VR), 2024_  
+[PDF](/assets/papers/IEEE_VR_24_StageAR.pdf)
 
----
+<br clear="left"/>
 
 <!-- ### 🛠 Projects
 
