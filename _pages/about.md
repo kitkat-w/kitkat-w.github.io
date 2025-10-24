@@ -14,8 +14,7 @@ profile:
 
 ### About Me
 
-I'm a Master's student in Robotics at Carnegie Mellon University. I am fortunate to be advised by [Prof. Matthew O'Toole](https://www.cs.cmu.edu/~motoole2/).  
-During my undergraduate studies at Carnegie Mellon University, I had the honour to work with [Prof. Anthony Rowe](https://users.ece.cmu.edu/~agr/) before joining my current lab.
+I'm a Master's student in Robotics at Carnegie Mellon University. I am fortunate to be advised by [Prof. Matthew O'Toole](https://www.cs.cmu.edu/~motoole2/). During my undergraduate studies at Carnegie Mellon University, I had the honour to work with [Prof. Anthony Rowe](https://users.ece.cmu.edu/~agr/) before joining my current lab.
 
 My research interest lies in computational photography, with experiences in real-time AR/ VR systems.
 
