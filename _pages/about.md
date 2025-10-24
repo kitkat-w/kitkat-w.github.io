@@ -29,20 +29,15 @@ I'm a Master's student in Robotics at Carnegie Mellon University. My research fo
 
 <!-- ### 🛠 Projects
 
-- **Hybrid Transient Imaging Simulation**  
+- **Hybrid Transient Imaging Simulation**
   Simulated structured light and continuous-wave ToF fusion in Mitsuba 3 with modeled PMD sensors.
 
-- **Translucent Material Renderer**  
+- **Translucent Material Renderer**
   Built a BSSRDF dipole-based volumetric path tracer in C++ and implemented inverse rendering.
 
-- **Visual Vibrometry**  
+- **Visual Vibrometry**
   Developed ESPI-based phase unwrapping algorithms to extract surface vibration patterns.
 
 --- -->
 
-### 📚 Education
-
-- **Carnegie Mellon University**, MS in Robotics (2025–2027)
-- **Carnegie Mellon University**, BS in ECE and CS (2021–2025), GPA: 3.89
-  - Dean’s List (all semesters)
-  - College Research Honour
+### Academic services
