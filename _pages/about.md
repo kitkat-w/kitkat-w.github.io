@@ -4,7 +4,7 @@ title: about
 permalink: /
 subtitle: >
   <a href='https://www.ri.cmu.edu/'>CMU RI</a>. Carnegie Mellon University. <a href='mailto:shengxiw@andrew.cmu.edu'>shengxiw@andrew.cmu.edu</a>
-
+social: true
 profile:
   align: right
   image: prof_pic.jpg
@@ -17,6 +17,14 @@ profile:
 I'm a Master's student in Robotics at Carnegie Mellon University. I am fortunate to be advised by [Prof. Matthew O'Toole](https://www.cs.cmu.edu/~motoole2/). During my undergraduate studies at Carnegie Mellon University, I had the honour to work with [Prof. Anthony Rowe](https://users.ece.cmu.edu/~agr/) before joining my current lab.
 
 My research interest lies in computational photography, with experiences in real-time AR/ VR systems.
+
+---
+
+### Photography
+
+I share photography on Instagram: [@ix.na_i](https://www.instagram.com/ix.na_i/).
+
+{% include instagram_gallery.liquid %}
 
 ---
 
