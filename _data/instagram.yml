@@ -3,4 +3,8 @@ profile_url: https://www.instagram.com/ix.na_i/
 
 # Add public Instagram post URLs you want to show on your site, e.g.:
 # - https://www.instagram.com/p/POST_SHORTCODE/
-posts: []
+posts:
+  - https://www.instagram.com/p/CuU5ghPvu2n/?img_index=1
+  - https://www.instagram.com/p/CtE8etDO5X3/
+  - https://www.instagram.com/p/CuH8FCcuA7j/?img_index=1
+  - https://www.instagram.com/p/DTihxkNDv69/?img_index=1
