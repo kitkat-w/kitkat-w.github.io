@@ -4,7 +4,6 @@ title: about
 permalink: /
 subtitle: >
   <a href='https://www.ri.cmu.edu/'>CMU RI</a>. Carnegie Mellon University. <a href='mailto:shengxiw@andrew.cmu.edu'>shengxiw@andrew.cmu.edu</a>
-social: true
 profile:
   align: right
   image: prof_pic.jpg
@@ -53,3 +52,11 @@ Teaching Assistant, 15-414: Bug Catching: Automated Program Verification and Tes
 Head Teaching Assistant, 15-473/673: Visual Computing Systems, Carnegie Mellon University (Fall 2024)
 
 Teaching Assistant, 21-259: Calculus in Three Dimensions (Fall 2022)
+
+---
+
+### Photography
+
+I share photography on Instagram: [@ix.na_i](https://www.instagram.com/ix.na_i/).
+
+{% include instagram_gallery_images.liquid limit=6 %}
