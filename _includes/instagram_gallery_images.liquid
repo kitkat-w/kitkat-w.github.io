@@ -44,7 +44,14 @@
           {% assign embed_url = clean_url | append: 'embed/' %}
 
           <div class="igimg-card igimg-card--embed">
-            <div class="igimg-embed">
+            <a
+              class="igimg-overlay"
+              href="{{ clean_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Instagram post"
+            ></a>
+            <div class="igimg-embed-square">
               <iframe
                 src="{{ embed_url }}"
                 title="Instagram post"
@@ -53,9 +60,6 @@
                 frameborder="0"
                 scrolling="no"
               ></iframe>
-            </div>
-            <div class="igimg-link">
-              <a href="{{ clean_url }}" target="_blank" rel="noopener noreferrer">Open post</a>
             </div>
           </div>
         {% endif %}
@@ -88,6 +92,12 @@
   .igimg-card--embed {
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+  .igimg-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
   }
   .igimg-card img {
     width: 100%;
@@ -95,24 +105,23 @@
     object-fit: cover;
     display: block;
   }
-  .igimg-embed {
+  /* Cropped Instagram embed (thumbnail-like) */
+  .igimg-embed-square {
     position: relative;
     width: 100%;
-    height: 100%;
+    padding-top: 100%;
     flex: 1 1 auto;
     background: rgba(0, 0, 0, 0.03);
+    overflow: hidden;
   }
-  .igimg-embed iframe {
+  .igimg-embed-square iframe {
     position: absolute;
-    inset: 0;
+    left: 0;
+    top: -56px; /* crop away most of the Instagram header */
     width: 100%;
-    height: 100%;
+    height: calc(100% + 112px); /* compensate for the crop */
     border: 0;
-  }
-  .igimg-link {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.95rem;
-    background: var(--global-bg-color, #fff);
+    pointer-events: none; /* allow the tile to click-through to the overlay link */
   }
   .igimg-empty {
     opacity: 0.85;
