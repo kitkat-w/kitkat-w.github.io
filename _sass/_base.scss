@@ -414,10 +414,6 @@ ul.task-list input[type="checkbox"] {
     font-size: 1.15rem;
     margin-bottom: 0.5rem;
 
-    i::before {
-      color: var(--global-text-color);
-    }
-
     a {
       color: var(--global-theme-color);
       text-decoration: none;

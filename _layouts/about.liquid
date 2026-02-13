@@ -70,19 +70,10 @@ layout: default
         {% assign ig = site.data.instagram %}
         <div class="instagram-contact">
           <div class="instagram-contact__title">
-            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-            {% if ig.profile_url %}
-              <a href="{{ ig.profile_url }}" target="_blank" rel="noopener noreferrer">
-                {% if ig.username %}@{{ ig.username }}{% else %}Instagram{% endif %}
-              </a>
-            {% elsif ig.username %}
-              <a href="https://www.instagram.com/{{ ig.username }}/" target="_blank" rel="noopener noreferrer">@{{ ig.username }}</a>
-            {% else %}
-              <span>Instagram</span>
-            {% endif %}
+            <span>Instagram</span>
           </div>
 
-          {% include instagram_gallery.liquid limit=3 %}
+          {% include instagram_gallery_images.liquid limit=6 %}
         </div>
       </div>
     {% endif %}

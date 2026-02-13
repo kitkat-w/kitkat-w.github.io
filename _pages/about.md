@@ -20,14 +20,6 @@ My research interest lies in computational photography, with experiences in real
 
 ---
 
-### Photography
-
-I share photography on Instagram: [@ix.na_i](https://www.instagram.com/ix.na_i/).
-
-{% include instagram_gallery.liquid %}
-
----
-
 ### Publications
 
 <img src="assets/img/stagear.png" alt="StageAR" width="150" align="left" style="margin-right:15px; border-radius:6px;">
