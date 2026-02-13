@@ -105,21 +105,23 @@
     object-fit: cover;
     display: block;
   }
-  /* Cropped Instagram embed (thumbnail-like) */
+  /* Uncropped Instagram embed */
+  .igimg-card--embed {
+    aspect-ratio: auto; /* allow embeds to be taller than 1:1 */
+  }
   .igimg-embed-square {
     position: relative;
     width: 100%;
-    padding-top: 100%;
+    padding-top: 125%;
     flex: 1 1 auto;
     background: rgba(0, 0, 0, 0.03);
     overflow: hidden;
   }
   .igimg-embed-square iframe {
     position: absolute;
-    left: 0;
-    top: -56px; /* crop away most of the Instagram header */
+    inset: 0;
     width: 100%;
-    height: calc(100% + 112px); /* compensate for the crop */
+    height: 100%;
     border: 0;
     pointer-events: none; /* allow the tile to click-through to the overlay link */
   }
