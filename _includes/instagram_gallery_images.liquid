@@ -24,21 +24,41 @@
         {% assign post_image = post.image %}
         {% assign post_alt = post.alt | default: 'Instagram post' %}
 
-        <a class="igimg-card" href="{{ post_url }}" target="_blank" rel="noopener noreferrer">
-          {% if post_image %}
-            {% assign file_ext = post_image | split: '.' | last %}
+        {% if post_image %}
+          <a class="igimg-card" href="{{ post_url }}" target="_blank" rel="noopener noreferrer">
             <img
               src="{% if post_image contains '://' %}{{ post_image }}{% else %}{{ post_image | relative_url }}{% endif %}"
               alt="{{ post_alt | escape }}"
               loading="lazy"
             >
-          {% else %}
-            <div class="igimg-missing">
-              <div class="igimg-missing__title">Add an image thumbnail</div>
-              <div class="igimg-missing__hint">Set <code>image</code> for this post in <code>_data/instagram.yml</code>.</div>
-            </div>
+          </a>
+        {% else %}
+          {%- comment -%}
+            Fallback to the previous behavior (Instagram embed) when no thumbnail image is provided.
+          {%- endcomment -%}
+          {% assign clean_url = post_url | split: '?' | first %}
+          {% assign last_char = clean_url | slice: -1, 1 %}
+          {% if last_char != '/' %}
+            {% assign clean_url = clean_url | append: '/' %}
           {% endif %}
-        </a>
+          {% assign embed_url = clean_url | append: 'embed/' %}
+
+          <div class="igimg-card igimg-card--embed">
+            <div class="igimg-embed">
+              <iframe
+                src="{{ embed_url }}"
+                title="Instagram post"
+                loading="lazy"
+                allowtransparency="true"
+                frameborder="0"
+                scrolling="no"
+              ></iframe>
+            </div>
+            <div class="igimg-link">
+              <a href="{{ clean_url }}" target="_blank" rel="noopener noreferrer">Open post</a>
+            </div>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
   {% else %}
@@ -65,28 +85,34 @@
     background: rgba(0, 0, 0, 0.02);
     aspect-ratio: 1 / 1;
   }
+  .igimg-card--embed {
+    display: flex;
+    flex-direction: column;
+  }
   .igimg-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
-  .igimg-missing {
+  .igimg-embed {
+    position: relative;
     width: 100%;
     height: 100%;
-    padding: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-    text-align: left;
+    flex: 1 1 auto;
+    background: rgba(0, 0, 0, 0.03);
   }
-  .igimg-missing__title {
-    font-weight: 600;
+  .igimg-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
-  .igimg-missing__hint {
-    opacity: 0.85;
+  .igimg-link {
+    padding: 0.5rem 0.75rem;
     font-size: 0.95rem;
+    background: var(--global-bg-color, #fff);
   }
   .igimg-empty {
     opacity: 0.85;
