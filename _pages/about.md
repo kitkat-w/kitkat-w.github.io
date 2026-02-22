@@ -28,6 +28,13 @@ _Tao Jin, **Shengxi Wu**, Mallesham Dasari, Kittipat Apicharttrisorn, Anthony Ro
 _IEEE Conference on Virtual Reality and 3D User Interfaces (VR), 2024_  
 [PDF](/assets/papers/IEEE_VR_24_StageAR.pdf)
 
+<details>
+<summary><strong>Abstract</strong></summary>
+<p>
+Localizing mobile phone users precisely enough to provide AR content in theaters and concert venues is extremely challenging due to dynamic staging and variable lighting. Visual markers are often disruptive in terms of aesthetics, and static pre-defined feature maps are not robust to visual changes. In this paper, we study several techniques that leverage sparse fixed infrastructure to monitor and adapt to changes in the environment at runtime to enable robust ARquality pose tracking for large audiences. Our most basic technique uses one or more fixed cameras in the environment to prune away poor feature points due to motion and lighting from a static model. For more challenging environments, we propose transmitting dynamic 3D feature maps that adapt to changes in the scene in real-time. Users with a mobile phone camera can use these maps to accurately localize across highly dynamic environments without explicit markers. We show the performance trade-offs resulting from StageAR’s different reconstruction techniques, ranging from multiple stereo cameras to cameras paired with LiDAR. We evaluate each approach in our system across a wide variety of simulated and real environments at auditorium/theater scale and find that our most accurate technique can match the performance of large (1.5x1.5m) back-lit static markers without being visible to users.
+</p>
+</details>
+
 <br clear="left"/>
 
 <!-- ### 🛠 Projects
