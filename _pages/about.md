@@ -30,12 +30,15 @@ _IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026_
 
 <br/>
 
-<img src="assets/img/implicit-surface-compression.DJOGDy3v_Z1oW3xp.webp" alt="Implicit" width="150" align="left" style="margin-right:15px; padding-top:12px; padding-bottom:12px; border-radius:6px;">
-
+<div style="display:flex; align-items:center; gap:15px;">
+<img src="assets/img/implicit-surface-compression.DJOGDy3v_Z1oW3xp.webp" alt="Implicit" width="150" style="border-radius:6px; flex-shrink:0;">
+<div markdown="1">
 **Implicit Surface Compression — with Good Old Discrete Cosine Transform and Motion Compensation**  
 _Tao Jin, **Shengxi Wu**, Tianshu Huang, Mallesham Dasari, Srinivasan Seshan, Anthony Rowe_  
 _ACM Transactions on Graphics (SIGGRAPH), 2026_  
 [PDF](/assets/papers/implicit_surface_compression.pdf)
+</div>
+</div>
 
 <br/>
 
