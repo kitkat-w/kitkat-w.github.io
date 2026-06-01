@@ -50,7 +50,7 @@ Localizing mobile phone users precisely enough to provide AR content in theaters
 
 --- -->
 
-### Academic services
+### Teaching
 
 Teaching Assistant, 18-453/653: Intro to XR Systems, Carnegie Mellon University (Fall 2025)
 
