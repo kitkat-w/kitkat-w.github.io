@@ -30,8 +30,6 @@ _IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026_
 
 <br/>
 
----
-
 <img src="assets/img/implicit-surface-compression.DJOGDy3v_Z1oW3xp.webp" alt="Implicit" width="150" align="left" style="margin-right:15px; border-radius:6px;">
 
 **Implicit Surface Compression — with Good Old Discrete Cosine Transform and Motion Compensation**  
@@ -39,9 +37,7 @@ _Tao Jin, **Shengxi Wu**, Tianshu Huang, Mallesham Dasari, Srinivasan Seshan, An
 _ACM Transactions on Graphics (SIGGRAPH), 2026_  
 [PDF](/assets/papers/implicit_surface_compression.pdf)
 
-<br clear="left"/>
-
----
+<br/>
 
 <img src="assets/img/stagear.png" alt="StageAR" width="150" align="left" style="margin-right:15px; border-radius:6px;">
 
@@ -58,6 +54,8 @@ Localizing mobile phone users precisely enough to provide AR content in theaters
 </details> -->
 
 <br clear="left"/>
+
+---
 
 <!-- ### 🛠 Projects
 
@@ -80,7 +78,7 @@ Teaching Assistant, 15-414: Bug Catching: Automated Program Verification and Tes
 
 Teaching Assistant, 15-473/673: Visual Computing Systems, Carnegie Mellon University (Fall 2024)
 
-Teaching Assistant, 21-259: Calculus in Three Dimensions (Fall 2022)
+Teaching Assistant, 21-259: Calculus in Three Dimensions, Carnegie Mellon University (Fall 2022)
 
 ---
 
