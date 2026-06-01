@@ -21,14 +21,18 @@ My research interest lies in computational photography, with experiences in real
 
 ### Publications
 
+<img src="assets/img/cspi_hero.png" alt="Implicit" width="150" align="left" style="margin-right:15px; border-radius:6px;">
+
 **Computational Speckle Pattern Interferometry**  
 _**Shengxi Wu**, Sophia Yang, Dorian Chan, Matthew O’Toole_  
 _IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026_  
-[PDF](/assets/papers/cspi.pdf) | [Website](https://imaging.cs.cmu.edu/cspi/) | [Code](https://github.com/kitkat-w/CSPI)
+[PDF](/assets/papers/cspi.pdf) | [Supplemental](/assets/papers/CVPR2026_CSPI_SUPPLEMENTAL.pdf) [Website](https://imaging.cs.cmu.edu/cspi/) | [Code](https://github.com/kitkat-w/CSPI)
 
 <br/>
 
 ---
+
+<img src="assets/img/implicit-surface-compression.DJOGDy3v_Z1oW3xp.webp" alt="Implicit" width="150" align="left" style="margin-right:15px; border-radius:6px;">
 
 **Implicit Surface Compression — with Good Old Discrete Cosine Transform and Motion Compensation**  
 _Tao Jin, **Shengxi Wu**, Tianshu Huang, Mallesham Dasari, Srinivasan Seshan, Anthony Rowe_  
