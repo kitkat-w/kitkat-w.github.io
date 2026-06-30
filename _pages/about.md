@@ -28,7 +28,7 @@ My research interest lies in computational photography, with prior experience in
 **Computational Speckle Pattern Interferometry**  
 _**Shengxi Wu**, Sophia Yang, Dorian Chan, Matthew O’Toole_  
 _IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026_  
-**Best Demo, CVPR 2026**  
+**Awarded Best Demo, CVPR 2026**  
 [PDF](/assets/papers/cspi.pdf) | [Supplemental](/assets/papers/CVPR2026_CSPI_SUPPLEMENTAL.pdf) | [Website](https://imaging.cs.cmu.edu/cspi/) | [Code](https://github.com/kitkat-w/CSPI)
 <br/>
 
