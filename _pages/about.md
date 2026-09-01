@@ -77,9 +77,11 @@ Localizing mobile phone users precisely enough to provide AR content in theaters
 
 ### Teaching
 
+Teaching Assistant, 18-463/663/862: Computational Photography, Carnegie Mellon University (Fall 2026)
+
 Teaching Assistant, 18-453/653: Intro to XR Systems, Carnegie Mellon University (Fall 2025)
 
-Teaching Assistant, 15-414: Bug Catching: Automated Program Verification and Testing, Carnegie Mellon University (Spring 2025)
+Teaching Assistant, 15-414/614: Bug Catching: Automated Program Verification and Testing, Carnegie Mellon University (Spring 2025)
 
 Teaching Assistant, 15-473/673: Visual Computing Systems, Carnegie Mellon University (Fall 2024)
 
