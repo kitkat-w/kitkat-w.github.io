@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "photography/**"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -36,6 +37,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "photography/**"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -94,6 +96,14 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Verify photography subsite
+        run: |
+          test -f _site/photography/index.html
+          test -f _site/photography/app.js
+          test -f _site/photography/style.css
+          test -f _site/photography/assets/01_Island_nostalgia/thumbnail_05__492__1673513808-34014000.jpg
+          test -f _site/photography/assets/02_Little_trip_on_water/DSC01667-2.jpg
+          python3 photography/_pipeline/verify_published.py --site _site/photography
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

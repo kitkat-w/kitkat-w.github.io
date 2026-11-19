@@ -188,6 +188,7 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
+  - photography/_pipeline/
   - _pages/about_einstein.md
   - purgecss.config.js
   - README.md

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f0e8" />
+    <meta name="description" content="Photography by Shengxi Wu. Island nostalgia and Little trip on water." />
+    <title>Shengxi Wu — A photo archive</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#journey">Skip to photographs</a>
+    <header class="masthead">
+      <a class="wordmark hover-caret" href="https://kitkat-w.github.io/" aria-label="Shengxi Wu — personal homepage">SHENGXI WU</a>
+      <span class="masthead-note" id="active-collection-title">A PHOTO ARCHIVE</span>
+      <button class="text-button hover-caret" id="index-toggle" aria-expanded="false" aria-controls="collection-index">[ index ]</button>
+    </header>
+
+    <nav id="collection-index" class="index-menu" aria-label="Collection index" hidden>
+      <a class="hover-caret" href="#intro"><span>00</span> Introduction</a>
+      <div id="index-collections"></div>
+      <p class="index-note">Photographs by Shengxi Wu</p>
+    </nav>
+
+    <main id="journey" tabindex="-1" aria-label="Scroll through the photographic journal">
+      <div class="scroll-stage">
+        <section class="intro-copy" aria-labelledby="intro-title">
+          <h1 id="intro-title">Shengxi Wu<span class="title-period">.</span></h1>
+          <p class="statement">
+            I’m still trying to create more cohesive narratives from what I capture and record.<br />
+            But I would still like to invite you to join me on this expedition.
+          </p>
+          <button id="begin-exploring" class="text-button begin-exploring" aria-label="Scroll to the first collection">↓</button>
+        </section>
+        <section id="collection-preview" class="collection-preview" aria-label="Collection preview" inert aria-hidden="true">
+          <button id="preview-open" class="preview-card" data-open="0" aria-label="Enter collection">
+            <span class="screen-sheet"
+              ><span class="screen-roller" aria-hidden="true"></span
+              ><img id="preview-image" src="assets/01_Island_nostalgia/thumbnail_05__492__1673513808-34014000.jpg" alt="" fetchpriority="high" /><span
+                class="screen-bottom"
+                aria-hidden="true"
+              ></span
+            ></span>
+            <span class="preview-caption">
+              <span class="preview-meta"><span id="preview-title"></span><span id="preview-years"></span></span>
+              <span class="preview-enter hover-caret">[ enter collection → ]</span>
+            </span>
+          </button>
+        </section>
+        <svg class="pull-cord" aria-hidden="true"><path id="pull-cord-path" /></svg>
+        <div class="collection-thread">
+          <div class="thread-window">
+            <div class="thread-belt">
+              <svg class="thread-drawing" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+                <path
+                  d="M -20 92 C 100 91 178 89 296 88 S 477 104 526 70 C 575 36 546 20 526 40 C 504 65 552 101 613 90 S 846 80 977 88 C 1035 92 1050 79 1040 75 C 1024 70 1026 96 1048 93 C 1080 88 1050 70 1040 84 C 1032 102 1093 98 1140 90 S 1330 89 1460 90"
+                />
+              </svg>
+              <nav id="thread-collections" aria-label="Explore collections"></nav>
+            </div>
+          </div>
+          <div class="thread-footer">
+            <span><span id="position-number" class="lcd"></span><span id="position-name"> / collections</span></span
+            ><button id="more-collections" class="text-button hover-caret">More along the thread →</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <p id="announcement" class="sr-only" aria-live="polite"></p>
+
+    <dialog id="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-header">
+        <a href="https://kitkat-w.github.io/" class="wordmark hover-caret" aria-label="Shengxi Wu — personal homepage">SHENGXI WU</a
+        ><span id="gallery-path">SELECTED / SERIES 001</span><button class="text-button hover-caret" id="close-gallery">← Back to the thread</button>
+      </div>
+      <div class="gallery-layout">
+        <aside class="gallery-description">
+          <p class="eyebrow" id="gallery-series-number"></p>
+          <h2 id="gallery-title" tabindex="-1"></h2>
+          <p id="gallery-statement"></p>
+          <p id="gallery-details" class="gallery-details"></p>
+          <button class="text-button next-collection hover-caret" id="next-collection">Next collection →</button>
+        </aside>
+        <div class="gallery-images">
+          <figure class="main-photo">
+            <img id="gallery-image" src="assets/01_Island_nostalgia/thumbnail_05__492__1673513808-34014000.jpg" alt="" />
+            <figcaption><span id="photo-caption"></span></figcaption>
+          </figure>
+          <div class="photo-toolbar">
+            <span id="photo-location"></span>
+            <div>
+              <button class="text-button hover-caret" id="previous-photo">[ prev ]</button
+              ><button class="text-button hover-caret" id="next-photo">[ next ]</button>
+            </div>
+          </div>
+          <div id="thumbnails" class="thumbnails" aria-label="Photographs in this collection"></div>
+        </div>
+      </div>
+      <div class="gallery-footer"><span id="sequence-label"></span><span>PHOTOGRAPHS BY SHENGXI WU</span></div>
+    </dialog>
+    <noscript><p class="no-script">This photographic journal needs JavaScript enabled.</p></noscript>
+  </body>
+</html>
