@@ -91,6 +91,6 @@ Teaching Assistant, 21-259: Calculus in Three Dimensions, Carnegie Mellon Univer
 
 ### Photography
 
-I share photography on Instagram: [@ix.na_i](https://www.instagram.com/ix.na_i/).
+Explore my [photo archive]({{ '/photography/' | relative_url }}), or find my photography on Instagram: [@ix.na_i](https://www.instagram.com/ix.na_i/).
 
 <!-- {% include instagram_gallery_images.liquid limit=6 %} -->
