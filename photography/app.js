@@ -101,6 +101,7 @@ let photoIndex = 0;
 let touchStart = null;
 let opener = null;
 let previewAnimation = null;
+let cordAnimation = null;
 let scrollFrame = 0;
 let scrollChapter = 0;
 let routeSelection = null;
@@ -163,6 +164,8 @@ function selectCollection(index) {
       ],
       { duration: 650, easing: "cubic-bezier(.22,.72,.16,1)" }
     );
+    cordAnimation?.cancel();
+    cordAnimation = $("#pull-cord-path").animate([{ strokeDashoffset: -1 }, {}], { duration: 650, easing: "ease-out" });
   }
   if (changed) drawCord();
   if (changed && window.scrollY >= scrollDistance * 0.65) $("#announcement").textContent = `${collection.title}, ${collection.years}.`;
@@ -175,12 +178,16 @@ function updateScroll() {
   const chapter = Math.round(position);
   const shift = clamp(position - (visibleStops - 1), 0, extraStops);
   const revealed = progress >= 0.65;
+  const journeyProgress = clamp(window.scrollY / (scrollDistance * collections.length));
+  const stage = $(".scroll-stage").style;
+  stage.setProperty("--thread-gap", reducedMotion.matches ? 0 : 1 - journeyProgress);
+  stage.setProperty("--cord-gap", reducedMotion.matches ? (revealed ? 0 : -1) : clamp((progress - 0.2) / 0.8) - 1);
   const fade = reducedMotion.matches ? Number(revealed) : clamp((progress - 0.3) / 0.5);
   $("#collection-preview").style.opacity = progress > 0.3 ? 1 : 0;
   $(".screen-sheet").style.clipPath = `inset(0 0 ${(1 - fade) * previewBounds().height}px 0)`;
   $(".screen-sheet").style.transform = reducedMotion.matches ? "none" : `translateY(${(1 - fade) * -24}px)`;
   $(".preview-caption").style.opacity = fade;
-  $(".pull-cord").style.opacity = fade;
+  $(".pull-cord").style.visibility = progress > 0.2 ? "visible" : "hidden";
   $("#collection-preview").inert = !revealed;
   $("#collection-preview").setAttribute("aria-hidden", String(!revealed));
   $(".intro-copy").style.opacity = reducedMotion.matches ? Number(!revealed) : 1 - clamp(progress / 0.7);
@@ -228,7 +235,8 @@ function drawCord() {
   const y = image.top;
   const targetX = clamp(stop.left + stop.width / 2, 8, window.innerWidth - 8);
   const targetY = stop.top;
-  $(".pull-cord").setAttribute("viewBox", `0 0 ${window.innerWidth} ${viewportHeight}`);
+  const cord = $(".pull-cord");
+  cord.setAttribute("viewBox", `0 0 ${cord.clientWidth} ${cord.clientHeight}`);
   $("#pull-cord-path").setAttribute(
     "d",
     `M ${image.right} ${y} L ${x} ${y} C ${x + 8} ${y + 70}, ${x - 6} ${targetY - 65}, ${x} ${targetY - 35} C ${x + 12} ${targetY - 10}, ${

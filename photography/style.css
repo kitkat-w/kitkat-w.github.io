@@ -10,6 +10,9 @@
   --ink: #353630;
   --muted: #686a60;
   --line: #c6c5ba;
+  --film-grain: url("ui/grain.webp?v=2");
+  --film-stock: var(--film-grain) repeat, radial-gradient(ellipse 30% 38% at 90% 12%, #d9965852, #dfab7626 46%, transparent) var(--paper);
+  --print-tone: grayscale(1) sepia(0.19) contrast(0.79) brightness(1.14);
   --ease: cubic-bezier(0.22, 0.72, 0.16, 1);
   --small: clamp(14px, 0.58vw, 22px);
   --header-height: clamp(87px, 4vw, 150px);
@@ -71,16 +74,23 @@ h2 {
 .hover-caret::after {
   content: "";
   display: inline-block;
-  width: 7px;
+  box-sizing: border-box;
+  width: max(3px, 0.22em);
   height: 0.8em;
   margin-left: 7px;
-  background: currentColor;
+  border: 1px solid currentColor;
+  border-radius: 16% 7% 11% 4%;
+  background: repeating-linear-gradient(155deg, currentColor 0 1.3px, transparent 1.6px 2.1px);
+  transform: rotate(-4deg);
   opacity: 0;
 }
 .hover-caret:hover::after,
-.hover-caret:focus-visible::after {
+.hover-caret:focus-visible::after,
+.collection-stop[aria-expanded="true"] .stop-name::after,
+.collection-stop:focus-visible .stop-name::after,
+.preview-card:focus-visible .preview-enter::after {
   opacity: 1;
-  animation: blink 1.1s step-end infinite;
+  animation: var(--caret-animation, blink 1.1s step-end infinite);
 }
 @keyframes blink {
   50% {
@@ -146,7 +156,7 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  background: var(--paper);
+  background: transparent;
   margin: 0;
   padding: 0 40px;
   border-bottom: 0;
@@ -173,7 +183,7 @@ body {
   top: 0;
   height: 100svh;
   overflow: clip;
-  background: var(--paper);
+  background: var(--film-stock);
 }
 .intro-copy {
   position: absolute;
@@ -191,7 +201,20 @@ h1 {
   margin: 26px 0 24px;
 }
 .title-period {
-  color: #96978b;
+  position: relative;
+  color: transparent;
+}
+.title-period::after {
+  content: "";
+  position: absolute;
+  left: 32%;
+  bottom: 0.36em;
+  width: 0.125em;
+  height: 0.12em;
+  border-radius: 49% 33% 43% 35%;
+  background: repeating-linear-gradient(148deg, #74766b 0 1.8px, #939488 2px 2.6px);
+  transform: rotate(-9deg);
+  animation: blink 1.45s step-end infinite;
 }
 .statement {
   font-size: clamp(14px, 1.15vw, 17px);
@@ -249,6 +272,21 @@ h1 {
   object-fit: contain;
   object-position: center bottom;
 }
+.screen-sheet img,
+.thumbnails img {
+  filter: var(--print-tone);
+  transition: filter 260ms ease-out;
+}
+@media (hover: hover) {
+  .preview-card:hover .screen-sheet img,
+  .thumbnails button:hover img {
+    filter: none;
+  }
+}
+.preview-card:focus-visible .screen-sheet img,
+.thumbnails button:focus-visible img {
+  filter: none;
+}
 .screen-roller,
 .screen-bottom {
   position: absolute;
@@ -282,13 +320,16 @@ h1 {
   height: 100%;
   pointer-events: none;
   z-index: 4;
-  opacity: 0;
 }
 .pull-cord path {
   fill: none;
   stroke: #85877b;
   stroke-width: 1;
   vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: var(--cord-gap, -1);
+  transition: stroke-dashoffset 340ms var(--ease);
 }
 .preview-meta {
   display: flex;
@@ -316,7 +357,6 @@ h1 {
   right: 0;
   bottom: 0;
   height: var(--thread-height);
-  background: var(--paper);
   z-index: 3;
 }
 .thread-window {
@@ -337,11 +377,20 @@ h1 {
   pointer-events: none;
   overflow: visible;
 }
-.thread-drawing path {
+.thread-drawing {
   fill: none;
   stroke: #85877b;
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+.thread-pencil {
+  opacity: 0.36;
+}
+.thread-ink {
+  stroke: #595b50;
+  stroke-dasharray: 1;
+  stroke-dashoffset: var(--thread-gap, 1);
+  transition: stroke-dashoffset 420ms var(--ease);
 }
 #thread-collections {
   position: absolute;
@@ -361,16 +410,21 @@ h1 {
   text-align: left;
   position: relative;
   padding: 8px 12px;
-  background: var(--paper);
+  isolation: isolate;
   font-size: var(--small);
   transition: transform 0.3s var(--ease);
+}
+.collection-stop::before {
+  content: "";
+  position: absolute;
+  inset: 0 -6%;
+  z-index: -1;
+  background: var(--film-grain) var(--paper);
+  mask-image: radial-gradient(ellipse, black 45%, transparent 75%);
 }
 .collection-stop:hover,
 .collection-stop[aria-expanded="true"] {
   transform: translateY(-4px);
-}
-.collection-stop[aria-expanded="true"] .stop-name::after {
-  opacity: 1;
 }
 .film-icon {
   width: 24px;
@@ -382,6 +436,7 @@ h1 {
   stroke-linejoin: round;
 }
 .stop-name {
+  --caret-animation: none;
   line-height: 1.5;
 }
 .stop-number {
@@ -465,7 +520,7 @@ dialog {
   height: 100svh;
   border: none;
   padding: 0 40px;
-  background: var(--paper);
+  background: var(--film-stock);
   color: var(--ink);
   overflow: auto;
   opacity: 0;
@@ -572,20 +627,20 @@ dialog::backdrop {
 .thumbnails button {
   width: calc((100% - 32px) / 3);
   max-width: 190px;
-  padding: 0;
-  opacity: 0.55;
-  transition: opacity 0.3s;
+  padding: 3px;
+  background: #f9f6ec;
+  box-shadow: 0 1px 3px #49463838;
+  transform: rotate(-0.55deg);
   position: relative;
+}
+.thumbnails button:nth-child(even) {
+  transform: rotate(0.55deg);
 }
 .thumbnails img {
   width: 100%;
   height: clamp(65px, 10svh, 115px);
   object-fit: cover;
   display: block;
-}
-.thumbnails button[aria-current="true"],
-.thumbnails button:hover {
-  opacity: 1;
 }
 .thumbnails button[aria-current="true"]::after {
   content: "";
@@ -834,10 +889,8 @@ dialog::backdrop {
   .collection-stop .film-icon {
     width: 22px;
     height: 29px;
-    background: var(--paper);
   }
   .stop-name {
-    background: var(--paper);
     font-size: 14px;
     line-height: 1.35;
     min-height: 38px;
@@ -847,11 +900,9 @@ dialog::backdrop {
     position: absolute;
     margin-left: 3px;
     bottom: 3px;
-    width: 5px;
   }
   .stop-number {
     font-size: 14px;
-    background: var(--paper);
   }
   .thread-drawing {
     height: 66px;
