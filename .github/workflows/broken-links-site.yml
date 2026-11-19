@@ -43,5 +43,12 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          # only check local links
-          args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
+          # Main-site pages use shared root assets; photography has its own assets.
+          args: --offline --exclude-path _site/photography --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
+      - name: Photography Link Checker 🔗
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          fail: true
+          output: lychee/photography.md
+          # Resolve the standalone archive's relative assets within its own folder.
+          args: --offline --verbose --no-progress '_site/photography/**/*.html'

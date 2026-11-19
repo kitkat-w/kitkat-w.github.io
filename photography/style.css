@@ -220,6 +220,7 @@ h1 {
 }
 .preview-card {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr) auto;
   gap: 18px;
   width: 100%;
@@ -229,6 +230,7 @@ h1 {
   overflow: visible;
 }
 .screen-sheet {
+  min-width: 0;
   min-height: 0;
   position: relative;
   display: flex;
@@ -240,6 +242,7 @@ h1 {
 }
 .screen-sheet img {
   display: block;
+  flex: none;
   width: auto;
   height: auto;
   max-width: 100%;

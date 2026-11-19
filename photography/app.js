@@ -206,6 +206,16 @@ function updateScroll() {
     .forEach((button, i) => button.setAttribute("aria-expanded", String(revealed && i === selectedCollection)));
 }
 function drawCord() {
+  const sheet = $(".screen-sheet");
+  const preview = $("#preview-image");
+  if (preview.naturalWidth && preview.naturalHeight) {
+    // Fit the full photograph to the available window area, including upscaling
+    // smaller film scans so their displayed size isn't capped by pixel dimensions.
+    const available = sheet.getBoundingClientRect();
+    const scale = Math.min(available.width / preview.naturalWidth, available.height / preview.naturalHeight);
+    preview.style.width = `${preview.naturalWidth * scale}px`;
+    preview.style.height = `${preview.naturalHeight * scale}px`;
+  }
   const image = $("#preview-image").getBoundingClientRect();
   $(".screen-sheet").style.setProperty("--photo-width", `${image.width}px`);
   $(".screen-sheet").style.setProperty("--photo-height", `${image.height}px`);
