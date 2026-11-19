@@ -157,7 +157,7 @@ function selectCollection(index) {
     previewAnimation?.cancel();
     previewAnimation = $(".screen-sheet").animate(
       [
-        { clipPath: `inset(0 0 ${$("#preview-image").getBoundingClientRect().height * 0.94}px 0)`, transform: "translateY(-18px)" },
+        { clipPath: `inset(0 0 ${previewBounds().height * 0.94}px 0)`, transform: "translateY(-18px)" },
         { clipPath: "inset(0 0 0% 0)", transform: "translateY(3px)", offset: 0.85 },
         { clipPath: "inset(0 0 0% 0)", transform: "translateY(0)" },
       ],
@@ -177,7 +177,7 @@ function updateScroll() {
   const revealed = progress >= 0.65;
   const fade = reducedMotion.matches ? Number(revealed) : clamp((progress - 0.3) / 0.5);
   $("#collection-preview").style.opacity = progress > 0.3 ? 1 : 0;
-  $(".screen-sheet").style.clipPath = `inset(0 0 ${(1 - fade) * $("#preview-image").getBoundingClientRect().height}px 0)`;
+  $(".screen-sheet").style.clipPath = `inset(0 0 ${(1 - fade) * previewBounds().height}px 0)`;
   $(".screen-sheet").style.transform = reducedMotion.matches ? "none" : `translateY(${(1 - fade) * -24}px)`;
   $(".preview-caption").style.opacity = fade;
   $(".pull-cord").style.opacity = fade;
@@ -205,18 +205,20 @@ function updateScroll() {
     .querySelectorAll("[data-preview]")
     .forEach((button, i) => button.setAttribute("aria-expanded", String(revealed && i === selectedCollection)));
 }
-function drawCord() {
-  const sheet = $(".screen-sheet");
+function previewBounds() {
   const preview = $("#preview-image");
-  if (preview.naturalWidth && preview.naturalHeight) {
-    // Fit the full photograph to the available window area, including upscaling
-    // smaller film scans so their displayed size isn't capped by pixel dimensions.
-    const available = sheet.getBoundingClientRect();
-    const scale = Math.min(available.width / preview.naturalWidth, available.height / preview.naturalHeight);
-    preview.style.width = `${preview.naturalWidth * scale}px`;
-    preview.style.height = `${preview.naturalHeight * scale}px`;
-  }
-  const image = $("#preview-image").getBoundingClientRect();
+  const frame = preview.getBoundingClientRect();
+  const scale =
+    preview.naturalWidth && preview.naturalHeight ? Math.min(frame.width / preview.naturalWidth, frame.height / preview.naturalHeight) : 0;
+  const width = preview.naturalWidth * scale;
+  const height = preview.naturalHeight * scale;
+  // Match object-fit: contain / object-position: center bottom. Read the painted
+  // bounds for the cord, without changing image dimensions during scrolling.
+  const left = frame.left + (frame.width - width) / 2;
+  return { left, right: left + width, top: frame.bottom - height, bottom: frame.bottom, width, height };
+}
+function drawCord() {
+  const image = previewBounds();
   $(".screen-sheet").style.setProperty("--photo-width", `${image.width}px`);
   $(".screen-sheet").style.setProperty("--photo-height", `${image.height}px`);
   $(".preview-caption").style.setProperty("--caption-width", `${Math.max(image.width, Math.min(560, window.innerWidth * 0.84))}px`);
